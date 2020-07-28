@@ -44,7 +44,7 @@ Each chunk contains the data for a single item, identified by it's `id` field. T
 in the table below.
 
 |Offset|Name|Type|
-|---|---|---|---|
+|---|---|---|
 |0|id|u32|
 |4|subtype|u8|
 |5|container_type<sup>[1](#itemData-fields-1)</sup>|u8|
