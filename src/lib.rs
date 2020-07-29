@@ -4,6 +4,7 @@ use nom::IResult;
 use nom::sequence::terminated;
 
 pub mod gmd;
+pub mod itm;
 
 fn take_null_terminated_string(input: &[u8]) -> IResult<&[u8], String> {
     let (input, value) = terminated(take_until("\0"), char('\0'))(input)?;
