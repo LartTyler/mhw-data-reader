@@ -3,14 +3,10 @@ use std::convert::TryFrom;
 use nom::bytes::complete::{tag, take};
 use nom::character::complete::char;
 use nom::combinator::map_res;
-use nom::error::ErrorKind;
 use nom::IResult;
 use nom::multi::count;
 use nom::number::complete::le_u32;
 use nom::sequence::terminated;
-use nom::tag;
-use nom::take;
-use nom::take_until;
 use num_enum::TryFromPrimitive;
 
 use crate::take_null_terminated_string;
