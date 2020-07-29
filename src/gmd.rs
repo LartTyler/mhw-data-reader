@@ -103,7 +103,7 @@ pub fn parse_header(input: &[u8]) -> IResult<&[u8], GmdHeader> {
     }))
 }
 
-pub fn parse_entries(input: &[u8], header: &GmdHeader) -> IResult<&[u8], Vec<GmdEntry>> {
+pub fn parse_entries<'a>(input: &'a [u8], header: &GmdHeader) -> IResult<&'a [u8], Vec<GmdEntry>> {
     // We'll need the info table (or at least the indexes that start each chunk of the info table)
     // later on.
     let (input, info_indexes) = count(
