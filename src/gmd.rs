@@ -90,7 +90,7 @@ pub fn parse_header(input: &[u8]) -> IResult<&[u8], GmdHeader> {
 
     // Throw away filename_length (we're just gonna take the next null-terminated string instead
     let (input, _) = take(4usize)(input)?;
-    let (input, filename) = take_null_terminated_string(input);
+    let (input, filename) = take_null_terminated_string(input)?;
 
     Ok((input, GmdHeader {
         version,
