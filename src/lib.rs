@@ -1,6 +1,7 @@
+use nom::bytes::complete::take_until;
+use nom::character::complete::char;
 use nom::IResult;
 use nom::sequence::terminated;
-use nom::bytes::complete::take_until;
 
 pub mod gmd;
 
