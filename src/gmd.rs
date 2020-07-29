@@ -55,7 +55,7 @@ pub struct GmdDocument {
 pub fn parse(input: &[u8]) -> Result<GmdDocument, &'static str> {
     match parse_document(input) {
         Ok((_, document)) => Ok(document),
-        Err(e) => Err("Invalid document"),
+        Err(_) => Err("Invalid document"),
     }
 }
 
