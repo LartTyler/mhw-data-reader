@@ -76,7 +76,7 @@ pub fn parse_header(input: &[u8]) -> IResult<&[u8], GmdHeader> {
     let (input, version) = le_u32(input)?;
     let (input, language) = map_res(
         le_u32,
-        |value| Language::try_from(value),
+        Language::try_from,
     )(input)?;
 
     // Throw away empty bytes following language code
